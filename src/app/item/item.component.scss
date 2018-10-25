@@ -1,0 +1,64 @@
+:host {
+    cursor: pointer;
+    transition: background-color .3s ease-in;
+    border-bottom: 1px solid #cccccc;
+    width: 20%;
+    line-height: 2;
+    position: relative;
+    margin: 2px 2px;
+    padding: 5px;
+    background: rgba( 228, 228, 228, .5);
+    display: flex;
+    p {
+        display: block;
+        word-wrap: normal;
+        text-align: left;
+        position: relative;
+        line-height: 1.2;
+        margin: 0 49px 20px 49px;
+        color: #cccccc;
+        transition: color .3s ease-in, transform .3s ease-in;
+        transform: translateY( 0px);
+    }
+    .id {
+        position: absolute;
+        display: block;
+        left: 5px;
+        top: 5px;
+        height: 20px;
+        background: #939393;
+        color: white;
+        line-height: 20px;
+        padding: 0 5px;
+    }
+    &:hover {
+        background: rgba(228, 228, 228, 0);
+        p {
+            color: #b3b3b3;
+            transform: translateY( 10px);
+        }
+        .id {
+            transition: .3s background-color;
+            background: rgb(101, 184, 255);
+        }
+    }
+    &:nth-child(even) {
+        background: rgba(228, 228, 228, .3);
+        p {
+            color: #c4c4c4;
+        }
+        &:hover {
+            background: rgba(42, 191, 255, 0);
+        }
+    }
+    .selected .id {
+        background: rgb(255, 140, 0);
+        border-bottom: 3px solid rgb(121, 121, 121);
+    }
+    @media ( max-width: 920px) {
+        width: 40%;
+    }
+    @media ( max-width: 525px) {
+        width: 100%;
+    }
+}
