@@ -9,6 +9,10 @@
     padding: 5px;
     background: rgba( 228, 228, 228, .5);
     display: flex;
+    .item {
+        display: flex;
+        flex: 1;
+    }
     p {
         display: block;
         word-wrap: normal;
